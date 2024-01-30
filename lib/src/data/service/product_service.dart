@@ -52,3 +52,10 @@ class ProductService {
     }
   }
 }
+// curl -X GET "https://krika.vtexcommercestable.com.br/api/catalog/pvt/collection/149/products" \
+// -H "X-VTEX-API-AppKey: vtexappkey-krika-XUCLKS" \
+// -H "X-VTEX-API-AppToken: AJSGRSGDIVXEFJPQQSSMSQRQIYBRSRXFMQRXJFOLLCBCDIWDCCPMAHQUAKJDWVIFCBLDUKVLAGOOUOCBITYBTOOIZFRJTYTKTUSZWXEPJSHBPFTKOKRLCTITKSWNGBYI"
+
+// curl -X GET "https://krika.vtexcommercestable.com.br/api/catalog/pvt/product/7" \
+// -H "X-VTEX-API-AppKey: vtexappkey-krika-XUCLKS" \
+// -H "X-VTEX-API-AppToken: AJSGRSGDIVXEFJPQQSSMSQRQIYBRSRXFMQRXJFOLLCBCDIWDCCPMAHQUAKJDWVIFCBLDUKVLAGOOUOCBITYBTOOIZFRJTYTKTUSZWXEPJSHBPFTKOKRLCTITKSWNGBYI"

@@ -91,7 +91,7 @@ class _PersonalTabState extends State<PersonalTab> {
                         Navigator.pushNamed(context, ChoiceAddressScreens);
                         break;
                       case 4:
-                        Navigator.pushNamed(context, RecentViewScreens,arguments: productVM.listRecent);
+                        Navigator.pushNamed(context, RecentViewScreens,arguments: productVM.listProduct);
                         break;
                     }
                   },

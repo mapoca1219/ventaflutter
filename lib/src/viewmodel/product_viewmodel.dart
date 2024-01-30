@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:venta_flutter/src/data/model/product.dart';
 import 'package:venta_flutter/src/data/service/product_service.dart';
 
 class ProductViewModel extends ChangeNotifier {
   final ProductService _productService;
 
-  ProductViewModel(this._productService);
+  // ProductViewModel(this._productService, {Product? product}) : _listProduct = [product!];
+ProductViewModel(this._productService, {Product? product}) : _listProduct = [];
 
   List<Map<String, dynamic>> _products = [];
   List<Map<String, dynamic>> get products => _products;
@@ -18,6 +20,15 @@ class ProductViewModel extends ChangeNotifier {
   String _error = '';
   String get error => _error;
 
+  late List<Product> _listProduct = [];
+
+  List<Product> get listProduct => _listProduct;
+
+  set listProduct(List<Product> value) {
+    _listProduct = value;
+    notifyListeners();
+  }
+  
   Future<void> fetchAllProducts(int collectionId) async {
     try {
       _loading = true;

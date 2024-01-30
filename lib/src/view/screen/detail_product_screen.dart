@@ -8,6 +8,7 @@ import 'package:venta_flutter/src/const/app_colors.dart';
 import 'package:venta_flutter/src/const/app_font.dart';
 import 'package:venta_flutter/src/data/model/inventory.dart';
 import 'package:venta_flutter/src/data/model/product.dart';
+import 'package:venta_flutter/src/data/service/product_service.dart';
 import 'package:venta_flutter/src/router/router_path.dart';
 import 'package:venta_flutter/src/viewmodel/auth_viemodel.dart';
 import 'package:venta_flutter/src/viewmodel/cart_viewmodel.dart';
@@ -29,10 +30,10 @@ class DetailProductScreen extends StatefulWidget {
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
 
-  List<String> listImage = [
-    'https://www.girlteencare.com/wp-content/uploads/2021/04/dd51d83736d0741a3a78ad68e8077805.jpg',
-    'https://www.efasheen.com/wp-content/uploads/2020/12/Pantone-Colors.png',
-    'https://thevou.com/wp-content/uploads/2021/05/Current-fashion-trends-wtvox.com-Boiler-suits-01.jpg',
+  List<String> listImage = [ 
+    'https://krika.vteximg.com.br/arquivos/ids/177487',
+    'https://krika.vteximg.com.br/arquivos/ids/177488',
+    'https://krika.vteximg.com.br/arquivos/ids/181543',
   ];
   Inventory? inventory = Inventory();
 
@@ -246,8 +247,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
       isScrollControlled: true,
       context: ctx,
       builder: (_) {
-        ProductViewModel productViewModel = ProductViewModel(); // cre
-        ProductViewModel productViewModel2 = ProductViewModel(); // cre// ate instance provider
+      ProductViewModel productViewModel = ProductViewModel(ProductService('https://krika.vtexcommercestable.com.br'));
+        // ProductViewModel productViewModel2 = ProductViewModel(); // cre// ate instance provider
         String select = '';
         Inventory?  a;
         return StatefulBuilder(builder: (BuildContext context, void Function(void Function()) setState) {
